@@ -18,7 +18,7 @@ class Participant(BaseModel):
 
     def save(self, *args, **kwargs):
         if not self.pk:
-            self.start_nr = Participant.objects.filter(race=self.race).count()
+            self.start_nr = Participant.objects.filter(race=self.race).count() + 1
         super(Participant, self).save(*args, **kwargs)
 
 
