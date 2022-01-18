@@ -21,6 +21,8 @@ from races import views
 
 router = routers.DefaultRouter()
 router.register(r'races', views.RaceViewSet)
+router.register(r'participants', views.ParticipantViewSet)
+router.register(r'results', views.ResultViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
