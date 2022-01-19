@@ -1,13 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useQuery } from 'react-query'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 
-  const { isLoading, error, data } = useQuery<[{id: number,name: string, description: string}]>('allRaces', () => 
-    fetch('http://localhost:8000/races').then(res => res.json()))
+
 
 
   return (
@@ -19,14 +17,7 @@ const Home: NextPage = () => {
 
       </Head>
 
-      {data?.map((item) => {
-        return (
-          <div key={item.id}>
-            <h1>{item.name}</h1>
-            <h4>{item.description}</h4>
-          </div>
-        )
-      })}
+
 
       <main className={styles.main}>
         <h1 className={styles.title}>
