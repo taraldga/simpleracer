@@ -26,7 +26,7 @@ export default function RaceDetails() {
             <h5>Deltagere</h5>
             <ul className="list-group">
               {data.participant_set?.map((participant) => {
-                return ( 
+                return (
                   <li key={participant.id}>
                     <div className="fw-bold">{participant.name}</div>
                     <div>{participant.email}</div>
