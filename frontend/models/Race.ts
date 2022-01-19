@@ -21,7 +21,7 @@ export interface Race {
   name: string;
   description: string;
   start_time: string;
-  participant_set?: any[];
+  participant_set?: ParticipantSerializer[];
 }
 
 export interface RaceListItem {
