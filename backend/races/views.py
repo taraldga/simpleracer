@@ -1,10 +1,9 @@
 from rest_framework.viewsets import ModelViewSet
-from races import serializers
-from .models import Race, Participant, Result
+from races import serializers, models
 
 
 class RaceViewSet(ModelViewSet):
-    queryset = Race.objects.all().order_by('-start_time')
+    queryset = models.Race.objects.all().order_by('-start_time')
 
     def get_serializer_class(self):
         if self.action == 'list':
@@ -16,9 +15,9 @@ class RaceViewSet(ModelViewSet):
 
 class ParticipantViewSet(ModelViewSet):
     serializer_class = serializers.ParticipantSerializer
-    queryset = Participant.objects.all()
+    queryset = models.Participant.objects.all()
 
 
 class ResultViewSet(ModelViewSet):
     serializer_class = serializers.ResultSerializer
-    queryset = Result.objects.all()
+    queryset = models.Result.objects.all()
