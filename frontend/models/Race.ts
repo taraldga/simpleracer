@@ -1,7 +1,7 @@
 export interface ParticipantSerializer {
   id?: number;
   name: string;
-  race: 1 | 2;
+  race: number;
   email: string;
   start_nr?: number;
 }

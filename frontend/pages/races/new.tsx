@@ -30,7 +30,6 @@ export default function CreateRace() {
   );
 
   const onSubmit = (data: Partial<Race>) => {
-    console.log(mutation);
     mutation.mutate(data);
   };
 
