@@ -14,7 +14,6 @@ export default function CreateRace() {
 
   const mutation = useMutation(
     (newRace: Partial<Race>) => {
-      console.log(newRace)
       return fetch("http://localhost:8000/races/", {
         method: "POST",
         headers: {
