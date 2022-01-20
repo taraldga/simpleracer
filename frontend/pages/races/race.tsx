@@ -10,7 +10,10 @@ export default function RaceDetails() {
   const { rid } = router.query;
 
   const { isLoading, error, data  } = useQuery<Race>(["allRaces", rid], () =>
-    fetch(`http://localhost:8000/races/${rid}`).then((res) => res.json())
+    fetch(`http://localhost:8000/races/${rid}`).then((res) => res.json()),
+    {
+      enabled: !!rid
+    }
   );
 
   return (
