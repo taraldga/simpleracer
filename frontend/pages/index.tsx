@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.actionbuttons}>
           <Link href="/races/new"><a className="btn btn-primary mx-4 my-2">Lag ny event</a></Link>
-          <Link href="/races/new"><a className="btn btn-outline-primary mx-4 my-2">Se alle eventer</a></Link>
+          <Link href="/races"><a className="btn btn-outline-primary mx-4 my-2">Se alle eventer</a></Link>
         </div>
       </main>
 
