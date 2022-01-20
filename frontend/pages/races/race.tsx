@@ -28,7 +28,7 @@ export default function RaceDetails() {
             <ul className="list-group">
               {data.participant_set?.map((participant) => {
                 return (
-                  <li key={participant.id}>
+                  <li key={participant.id} className="list-group-item">
                     <div className="fw-bold">{participant.name}</div>
                     <div>{participant.email}</div>
                   </li>

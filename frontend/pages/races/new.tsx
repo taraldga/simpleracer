@@ -38,12 +38,12 @@ export default function CreateRace() {
       <h1 style={{ textAlign: "center" }}>Lag et nytt løp</h1>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="racename" className="label">
+        <label htmlFor="racename" className="label mt-2">
           Løpnavn
         </label>
         <input id="racename" className="form-control" {...register("name")} />
 
-        <label htmlFor="racedescription" className="label">
+        <label htmlFor="racedescription" className="label mt-2">
           Beskrivelse
         </label>
         <input
@@ -52,7 +52,7 @@ export default function CreateRace() {
           {...register("description")}
         />
 
-        <label htmlFor="racedatetime" className="label">
+        <label htmlFor="racedatetime" className="label mt-2">
           Dato og tid
         </label>
         <input
@@ -61,7 +61,7 @@ export default function CreateRace() {
           className="form-control"
           {...register("start_time")}
         />
-        <button className="btn btn-primary">Lag løp</button>
+        <button className="btn btn-primary btn-lg w-100 my-2">Lag løp</button>
       </form>
     </div>
   );

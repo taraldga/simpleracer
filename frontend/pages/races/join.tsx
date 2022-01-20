@@ -53,7 +53,7 @@ export default function JoinRace() {
         className="form-control"
         {...register("email")}
       />
-      <button className="btn btn-primary w-100">Meld deg på</button>
+      <button className="btn btn-primary btn-lg my-2 w-100">Meld deg på</button>
     </form>
   </div>
   )
