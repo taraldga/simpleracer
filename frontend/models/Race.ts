@@ -1,4 +1,4 @@
-export interface ParticipantSerializer {
+export interface Participant {
   id?: number;
   name: string;
   race: number;
@@ -21,7 +21,7 @@ export interface Race {
   name: string;
   description: string;
   start_time: string;
-  participant_set?: ParticipantSerializer[];
+  participant_set?: Participant[];
 }
 
 export interface RaceListItem {

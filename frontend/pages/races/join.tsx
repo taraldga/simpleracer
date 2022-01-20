@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
-import { ParticipantSerializer } from "../../models/Race";
+import { Participant } from "../../models/Race";
 
 
 export default function JoinRace() {
@@ -14,7 +14,7 @@ export default function JoinRace() {
   } = useForm();
 
   const mutation = useMutation(
-    (newParticipant: Partial<ParticipantSerializer>) => {
+    (newParticipant: Partial<Participant>) => {
       return fetch("http://localhost:8000/participants/", {
         method: "POST",
         headers: {
@@ -25,12 +25,12 @@ export default function JoinRace() {
     },
     {
       onSuccess: (data: any) => {
-        // router.replace(`/races/race?rid=${data?.id}`);
+        router.replace(`/races/race?rid=${data?.id}`);
       },
     }
   );
 
-  const onSubmit = (data: Partial<ParticipantSerializer>) => {
+  const onSubmit = (data: Partial<Participant>) => {
     data.race = parseInt(rid as string);
     mutation.mutate(data);
   };
