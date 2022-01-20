@@ -25,7 +25,7 @@ export default function JoinRace() {
     },
     {
       onSuccess: (data: any) => {
-        router.replace(`/races/race?rid=${data?.id}`);
+        router.replace(`/races/race?rid=${rid}`);
       },
     }
   );
